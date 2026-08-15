@@ -53,6 +53,32 @@ Or in-session: `/model clinepass/cline-pass/glm-5.2`
 
 Aliases: `clinepass`, `cline-pass`, `cline_pass`, `clinepass-provider`.
 
+## IMPORTANT: plugin alone is not enough — add the `providers:` config block
+
+Hermes has TWO provider-resolution paths:
+
+1. **Runtime chat** — `get_provider_profile()` → consults the plugin registry → sees the plugin.
+2. **`/model` switcher, `hermes model`, dashboard** — `resolve_provider_full()` → consults models.dev + the `providers:` section of config.yaml → **does NOT see the plugin**.
+
+Without the config block you get:
+```
+✗ Unknown provider 'clinepass'. Check 'hermes model' for available providers,
+  or define it in config.yaml under 'providers:'.
+```
+
+Add this to `~/.hermes/config.yaml` (and each profile's config.yaml):
+
+```yaml
+providers:
+  clinepass:
+    name: ClinePass
+    api: https://api.cline.bot/api/v1
+    key_env: CLINE_API_KEY
+    transport: openai_chat
+```
+
+`install.sh` does this automatically for the default home and all profiles.
+
 ## Known limitation — non-streaming envelope (IMPORTANT)
 
 `api.cline.bot` wraps **non-streaming** Chat Completions in a gateway envelope:
