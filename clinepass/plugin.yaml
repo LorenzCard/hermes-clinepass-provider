@@ -1,0 +1,5 @@
+name: clinepass-provider
+kind: model-provider
+version: 1.0.0
+description: "ClinePass subscription models (GLM-5.2, Kimi, DeepSeek, Qwen) via OpenAI-compatible API. Static API key (CLINE_API_KEY)."
+author: "Lorenzo Cardona"
