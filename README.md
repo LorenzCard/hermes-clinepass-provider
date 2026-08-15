@@ -9,6 +9,7 @@ as an LLM provider — 11 curated open-weight coding models via an OpenAI-compat
 | Model | ID | Context |
 |---|---|---|
 | GLM-5.2 | `cline-pass/glm-5.2` | 200K |
+| GLM-5.3 | `cline-pass/glm-5.3` | 200K |
 | Kimi K2.7 Code | `cline-pass/kimi-k2.7-code` | 262K |
 | Kimi K2.6 | `cline-pass/kimi-k2.6` | 262K |
 | Kimi K3 | `cline-pass/kimi-k3` | 1M |
@@ -19,6 +20,7 @@ as an LLM provider — 11 curated open-weight coding models via an OpenAI-compat
 | MiniMax M3 | `cline-pass/minimax-m3` | 1M |
 | Qwen3.7 Max | `cline-pass/qwen3.7-max` | 262K |
 | Qwen3.7 Plus | `cline-pass/qwen3.7-plus` | 1M |
+| Qwen3.8 Max | `cline-pass/qwen3.8-max` | 262K |
 
 ## Install
 

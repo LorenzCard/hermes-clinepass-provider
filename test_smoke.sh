@@ -23,8 +23,8 @@ assert "clinepass" in names, f"clinepass not in registry: {names}"
 prof = [p for p in list_providers() if p.name == "clinepass"][0]
 assert prof.base_url == "https://api.cline.bot/api/v1"
 assert "CLINE_API_KEY" in prof.env_vars
-assert len(prof.fallback_models) == 11
-print("[OK] registry discovery: clinepass registered, 11 fallback models")
+assert len(prof.fallback_models) == 13
+print("[OK] registry discovery: clinepass registered, 13 fallback models")
 EOF
 else
   echo "[SKIP] registry check (no providers/ package in cwd)"

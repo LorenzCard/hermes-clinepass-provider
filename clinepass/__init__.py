@@ -37,6 +37,7 @@ clinepass = ProviderProfile(
     # the live /models fetch fails). All support tool calling.
     fallback_models=(
         "cline-pass/glm-5.2",
+        "cline-pass/glm-5.3",
         "cline-pass/kimi-k2.7-code",
         "cline-pass/kimi-k2.6",
         "cline-pass/kimi-k3",
@@ -47,10 +48,12 @@ clinepass = ProviderProfile(
         "cline-pass/minimax-m3",
         "cline-pass/qwen3.7-max",
         "cline-pass/qwen3.7-plus",
+        "cline-pass/qwen3.8-max",
     ),
     # Per-model output caps (context windows from ClinePass docs).
-    # GLM-5.2 200K, Kimi K2.7/K2.6 262K, Kimi K3 1M, DeepSeek V4 1M,
-    # MiMo 262K, MiniMax M3 1M, Qwen3.7 Max 262K, Qwen3.7 Plus 1M.
+    # GLM-5.2/5.3 200K, Kimi K2.7/K2.6 262K, Kimi K3 1M, DeepSeek V4 1M,
+    # MiMo 262K, MiniMax M3 1M, Qwen3.7 Max 262K, Qwen3.7 Plus 1M,
+    # Qwen3.8 Max 262K.
 )
 
 register_provider(clinepass)
